@@ -30,12 +30,12 @@ jobs:
         run: gradle assembleDebug --no-daemon
 
       - name: Rename APK
-        run: cp app/build/outputs/apk/debug/app-debug.apk "app/build/outputs/apk/debug/ساعة-الكبار.apk"
+        run: cp app/build/outputs/apk/debug/app-debug.apk "app/build/outputs/apk/debug/Saat-AlKibar.apk"
 
       - name: Upload APK as workflow artifact
         uses: actions/upload-artifact@v7
         with:
-          name: ساعة-الكبار-APK
+          name: Saat-AlKibar-APK
           path: app/build/outputs/apk/debug/ساعة-الكبار.apk
           if-no-files-found: error
 
