@@ -1,0 +1,28 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.hamzaps4id.grandmaclock'
+    compileSdk 37
+
+    defaultConfig {
+        applicationId 'com.hamzaps4id.grandmaclock'
+        minSdk 23
+        targetSdk 37
+        versionCode 1
+        versionName '1.0'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
