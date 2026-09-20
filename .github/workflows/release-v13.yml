@@ -37,6 +37,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release delete v1.4.0 --yes || true
-          gh release create v1.4.0 "app/build/outputs/apk/debug/ساعة-الكبار.apk" \
+          gh release create v1.4.0 "app/build/outputs/apk/debug/Saat-AlKibar.apk" \
             --title "ساعة الكبار v1.4.0" \
-            --notes "إصدار v1.4: تم تغيير اسم التطبيق إلى ساعة الكبار، واسم ملف التثبيت إلى ساعة-الكبار.apk."
+            --notes "إصدار v1.4: تم تغيير اسم التطبيق إلى ساعة الكبار، واسم ملف التثبيت إلى Saat-AlKibar.apk."
