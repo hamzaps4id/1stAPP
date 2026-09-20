@@ -41,6 +41,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release delete v1.0.0 --yes || true
-          gh release create v1.0.0 app/build/outputs/apk/release/app-release.apk \
+          gh release create v1.0.0 app/build/outputs/apk/debug/app-debug.apk \
             --title "ساعة جدتي v1.0.0" \
             --notes "نسخة أولى من تطبيق ساعة جدتي: ساعة عقارب كبيرة وواضحة، تعمل بملء الشاشة وتبقي الشاشة مضاءة أثناء تشغيل التطبيق."
