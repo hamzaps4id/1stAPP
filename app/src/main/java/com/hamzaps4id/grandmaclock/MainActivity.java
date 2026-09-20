@@ -51,27 +51,31 @@ public class MainActivity extends Activity {
 
         clockView = new AnalogClockView(this);
         clockView.setTheme(preferences.getInt(THEME, 0));
-        root.addView(clockView, new FrameLayout.LayoutParams(
+
+        FrameLayout.LayoutParams clockParams = new FrameLayout.LayoutParams(
                 FrameLayout.LayoutParams.MATCH_PARENT,
-                FrameLayout.LayoutParams.MATCH_PARENT));
+                FrameLayout.LayoutParams.MATCH_PARENT);
+        root.addView(clockView, clockParams);
 
         Button backgroundButton = new Button(this);
-        backgroundButton.setText("الخلفية");
-        backgroundButton.setTextSize(16f);
+        backgroundButton.setText("تغيير الخلفية");
+        backgroundButton.setTextSize(18f);
         backgroundButton.setTextColor(Color.WHITE);
         backgroundButton.setAllCaps(false);
-        backgroundButton.setPadding(24, 8, 24, 8);
+        backgroundButton.setMinHeight(64);
+        backgroundButton.setPadding(32, 8, 32, 8);
 
         GradientDrawable buttonBackground = new GradientDrawable();
-        buttonBackground.setColor(0xCC222222);
-        buttonBackground.setCornerRadius(60f);
+        buttonBackground.setColor(0xEE222222);
+        buttonBackground.setCornerRadius(100f);
+        buttonBackground.setStroke(2, 0xFFFFFFFF);
         backgroundButton.setBackground(buttonBackground);
 
         FrameLayout.LayoutParams buttonParams = new FrameLayout.LayoutParams(
                 FrameLayout.LayoutParams.WRAP_CONTENT,
                 FrameLayout.LayoutParams.WRAP_CONTENT);
         buttonParams.gravity = Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL;
-        buttonParams.bottomMargin = 28;
+        buttonParams.bottomMargin = 32;
         root.addView(backgroundButton, buttonParams);
 
         backgroundButton.setOnClickListener(v -> showBackgroundDialog());
@@ -83,13 +87,13 @@ public class MainActivity extends Activity {
         int current = clockView.getThemeIndex();
 
         new AlertDialog.Builder(this)
-                .setTitle("اختر الخلفية")
+                .setTitle("تغيير خلفية الساعة")
                 .setSingleChoiceItems(themeNames, current, (dialog, which) -> {
                     clockView.setTheme(which);
                     preferences.edit().putInt(THEME, which).apply();
                     dialog.dismiss();
                 })
-                .setNegativeButton("إلغاء", null)
+                .setNegativeButton("إغلاق", null)
                 .show();
     }
 }
