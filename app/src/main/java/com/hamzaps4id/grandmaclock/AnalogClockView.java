@@ -85,17 +85,17 @@ public class AnalogClockView extends View {
         }
 
         String[] numbers = {
-                "١٢", "١", "٢", "٣", "٤", "٥",
-                "٦", "٧", "٨", "٩", "١٠", "١١"
+                "12", "1", "2", "3", "4", "5",
+                "6", "7", "8", "9", "10", "11"
         };
 
         paint.setStyle(Paint.Style.FILL);
         paint.setColor(textColor);
         paint.setTextAlign(Paint.Align.CENTER);
         paint.setTypeface(Typeface.create(Typeface.SANS_SERIF, Typeface.BOLD));
-        paint.setTextSize(radius * 0.135f);
+        paint.setTextSize(radius * 0.155f);
 
-        float numberRadius = radius * 0.68f;
+        float numberRadius = radius * 0.67f;
         Paint.FontMetrics metrics = paint.getFontMetrics();
         float baselineOffset = -(metrics.ascent + metrics.descent) / 2f;
 
