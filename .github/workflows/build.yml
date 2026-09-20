@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: grandma-clock-release
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -43,4 +47,4 @@ jobs:
           gh release delete v1.2.0 --yes || true
           gh release create v1.2.0 app/build/outputs/apk/debug/app-debug.apk \
             --title "ساعة جدتي v1.2.0" \
-            --notes "نسخة v1.2 من تطبيق ساعة جدتي: ساعة عقارب كبيرة وواضحة، تعمل بملء الشاشة وتبقي الشاشة مضاءة أثناء تشغيل التطبيق."
+            --notes "نسخة v1.2 من تطبيق ساعة جدتي مع أرقام كبيرة وخيارات لتغيير الخلفية: ساعة عقارب كبيرة وواضحة، تعمل بملء الشاشة وتبقي الشاشة مضاءة أثناء تشغيل التطبيق."
