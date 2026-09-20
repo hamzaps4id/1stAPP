@@ -1,4 +1,4 @@
-name: Release Grandma Clock v1.3
+name: Release Grandma Clock v1.4
 
 on:
   workflow_dispatch:
@@ -29,9 +29,21 @@ jobs:
       - name: Build APK
         run: gradle assembleDebug --no-daemon
 
+      - name: Rename APK
+        run: cp app/build/outputs/apk/debug/app-debug.apk "app/build/outputs/apk/debug/ساعة-الكبار.apk"
+
+      - name: Upload APK as workflow artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: ساعة-الكبار-APK
+          path: app/build/outputs/apk/debug/ساعة-الكبار.apk
+          if-no-files-found: error
+
       - name: Publish GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release delete v1.3.0 --yes || true
-          gh release create v1.3.0 app/build/outputs/apk/debug/app-debug.apk             --title "ساعة جدتي v1.3.0"             --notes "إصدار v1.3: أيقونة التطبيق أصبحت على شكل ساعة، مع أرقام كبيرة وخيارات لتغيير الخلفية."
+          gh release delete v1.4.0 --yes || true
+          gh release create v1.4.0 "app/build/outputs/apk/debug/ساعة-الكبار.apk" \
+            --title "ساعة الكبار v1.4.0" \
+            --notes "إصدار v1.4: تم تغيير اسم التطبيق إلى ساعة الكبار، واسم ملف التثبيت إلى ساعة-الكبار.apk."
