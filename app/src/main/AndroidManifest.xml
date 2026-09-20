@@ -3,6 +3,7 @@
     <application
         android:theme="@style/AppTheme"
         android:label="ساعة جدتي"
+        android:icon="@drawable/ic_clock"
         android:allowBackup="false"
         android:supportsRtl="true">
         <activity
