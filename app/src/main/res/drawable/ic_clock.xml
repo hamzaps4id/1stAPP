@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Outer clock body -->
+    <path
+        android:fillColor="#111111"
+        android:pathData="M54,3 A51,51 0,1 0,54,105 A51,51 0,1 0,54,3" />
+
+    <!-- Clock face -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,10 A44,44 0,1 0,54,98 A44,44 0,1 0,54,10" />
+
+    <!-- 12 o'clock -->
+    <path android:fillColor="#111111" android:pathData="M51.5,14 L56.5,14 L56.5,24 L51.5,24 Z" />
+    <!-- 3 o'clock -->
+    <path android:fillColor="#111111" android:pathData="M84,51.5 L94,51.5 L94,56.5 L84,56.5 Z" />
+    <!-- 6 o'clock -->
+    <path android:fillColor="#111111" android:pathData="M51.5,84 L56.5,84 L56.5,94 L51.5,94 Z" />
+    <!-- 9 o'clock -->
+    <path android:fillColor="#111111" android:pathData="M14,51.5 L24,51.5 L24,56.5 L14,56.5 Z" />
+
+    <!-- Other hour marks -->
+    <path android:fillColor="#111111" android:pathData="M69.5,18 L73.5,20.5 L68.5,29 L64.5,26.5 Z" />
+    <path android:fillColor="#111111" android:pathData="M87.5,34.5 L90,38.5 L81.5,43.5 L79,39.5 Z" />
+    <path android:fillColor="#111111" android:pathData="M87.5,69.5 L90,73.5 L81.5,68.5 L79,64.5 Z" />
+    <path android:fillColor="#111111" android:pathData="M69.5,90 L73.5,87.5 L68.5,79 L64.5,81.5 Z" />
+    <path android:fillColor="#111111" android:pathData="M38.5,90 L34.5,87.5 L39.5,79 L43.5,81.5 Z" />
+    <path android:fillColor="#111111" android:pathData="M20.5,69.5 L18,73.5 L26.5,68.5 L29,64.5 Z" />
+    <path android:fillColor="#111111" android:pathData="M20.5,34.5 L18,38.5 L26.5,43.5 L29,39.5 Z" />
+    <path android:fillColor="#111111" android:pathData="M38.5,18 L34.5,20.5 L39.5,29 L43.5,26.5 Z" />
+
+    <!-- Hands -->
+    <path
+        android:fillColor="#111111"
+        android:pathData="M54,27 L58,27 L58,54 L54,54 Z" />
+    <path
+        android:fillColor="#111111"
+        android:pathData="M54,51 L57,54 L82,68 L79.5,72 L54,57 Z" />
+
+    <!-- Center -->
+    <path
+        android:fillColor="#E53935"
+        android:pathData="M54,48 A6,6 0,1 0,54,60 A6,6 0,1 0,54,48" />
+</vector>
